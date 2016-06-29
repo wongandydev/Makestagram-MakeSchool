@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kGp-Gz-lLj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--camera-->
+        <scene sceneID="tHo-bp-37W">
+            <objects>
+                <viewController id="OmW-TD-QxO" customClass="PhotoViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d3C-bg-Tae"/>
+                        <viewControllerLayoutGuide type="bottom" id="LNv-8c-Jpg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P6E-YI-sQP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="camera" image="camera" id="iKY-RH-O3g">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3AM-gg-6dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="263"/>
+        </scene>
+        <!--people-->
+        <scene sceneID="cma-Yg-ySK">
+            <objects>
+                <viewController id="7VL-li-G4X" customClass="FriendSearchViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SAV-rl-ARv"/>
+                        <viewControllerLayoutGuide type="bottom" id="cM0-H4-kO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fnf-n9-E8k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="people" image="people" id="CTr-NJ-Ewg">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzi-aD-oJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="847"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="Lug-U7-phs">
+            <objects>
+                <viewController id="mHv-uM-xtO" customClass="TimelineViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pWS-ac-Ovx"/>
+                        <viewControllerLayoutGuide type="bottom" id="6In-ON-CeO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="njK-6S-PRY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="home" image="home" id="NdF-Uj-Nee">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80k-wN-ucU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-398"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KCJ-wI-NOf">
+            <objects>
+                <tabBarController id="kGp-Gz-lLj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="O0g-pP-dky">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mHv-uM-xtO" kind="relationship" relationship="viewControllers" id="NoR-ka-fgB"/>
+                        <segue destination="OmW-TD-QxO" kind="relationship" relationship="viewControllers" id="bt0-MW-mCw"/>
+                        <segue destination="7VL-li-G4X" kind="relationship" relationship="viewControllers" id="jCj-5d-et9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5L6-5s-Z1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="-67"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="40" height="30"/>
+        <image name="home" width="38" height="36"/>
+        <image name="people" width="42" height="42"/>
+    </resources>
+</document>
