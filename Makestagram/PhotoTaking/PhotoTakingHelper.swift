@@ -64,7 +64,7 @@ extension PhotoTakingHelper: UIImagePickerControllerDelegate, UINavigationContro
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject: AnyObject]!) { //Function will start when image is selected
         viewController.dismissViewControllerAnimated(false, completion: nil)
         
-        callback(image)// hands hte image that has been sleected as an argument. 
+        callback(image)// hands hte image that has been sleected as an argument.
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) { //Function will start when cancel is tapped

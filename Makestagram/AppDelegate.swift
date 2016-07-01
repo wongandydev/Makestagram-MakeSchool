@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ParseClientConfiguration {
             $0.applicationId = "makestagram"
             $0.server = "https://makestagram-parse-andyw.herokuapp.com/parse"
+        
         }
+        
+        
+        
         Parse.initializeWithConfiguration(configuration)
         
         do { //What is with the do and catch? -> This is a error handling code. If it user can log in then it's great, it will proceed, if not then it will print Unable to log in
@@ -37,6 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else{
             print ("No logged in user ;(")
         }
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
         
         return true
     }
