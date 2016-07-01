@@ -71,6 +71,9 @@ extension TimelineViewController: UITableViewDataSource {
         //Right before a post will be displated we will start the image download
         post.downloadImage()
         //Instead of changing the image that is displyed in the cell from TimelineViewController, we assign the post that will be displayed to the Post object itself 
+       
+        post.fetchLikes()
+        
         cell.post = post
 //        cell.postImageView.image = posts[indexPath.row].image //decides which image should be displayed in the cell
         

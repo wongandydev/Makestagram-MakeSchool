@@ -77,11 +77,32 @@ class Post: PFObject, PFSubclassing{
     
             let validLikes = likes?.filter { like in like[ParseHelper.ParseLikeFromUser] != nil} // filter method that is used to make sure that all the likes that done be deleted users or users that no longer uses the app will be removed. Or end the statements below will cause the app to crash
             
-            self.likes.value = validLikes?.map { like in //Map method is similar to filter but replaces the objects instead of deleting them 
+            self.likes.value = validLikes?.map { like in //Map method is similar to filter but replaces the objects instead of deleting them
                 let fromUser = like[ParseHelper.ParseLikeFromUser] as! PFUser
                 
                 return fromUser
                 }
             })
         }
+    func doesUserLikePost(user: PFUser) -> Bool {//Checks to see if a user liked a post
+        if let likes = likes.value { //if the user did like the post then continue to the statement below, else, it wil return false
+            return likes.contains(user) //returns the user that liked the post
+        }
+        else{
+            return false
+        }
     }
+    func toggleLikePost(user: PFUser) {
+        if (doesUserLikePost(user)) {
+            //if post is Liked, unlike it now
+            likes.value = likes.value?.filter { $0 != user } // removes the user from the local cahe stored in the likes property
+            ParseHelper.unlikePost(user, post: self) //Syncs the change with Parse
+        }
+        else {
+            //if this post is not liked yet, like it now 
+            //2
+            likes.value?.append(user) //Since the user hasn't liked the post yet, we will add the userinto the list of users who liked the post
+            ParseHelper.likePost(user, post: self)//syncs with Parse
+        }
+    }
+}
