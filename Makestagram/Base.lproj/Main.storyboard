@@ -68,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="470"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Adw-cL-T9D" id="Sab-Ot-A8U">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="469"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="469.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzc-VS-s1p">
@@ -160,6 +160,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="mHv-uM-xtO" id="B6E-hj-BwY"/>
+                                    <outlet property="delegate" destination="mHv-uM-xtO" id="wDj-Ow-enC"/>
                                 </connections>
                             </tableView>
                         </subviews>

@@ -36,7 +36,7 @@ class ParseHelper { //Going to wrap all of our helper methods into a class calle
     
     
     //marked static so tha twe can call it without having to createa an instance of ParseHelpeer.
-    static func timelineRequestForCurrentUser(completionBlock: PFQueryArrayResultBlock) { //This is done so you can call this func with 'ParseHelper.timelimeRequestforUser instead of just timelineRequestforUser //So we will always find the function being called
+    static func timelineRequestForCurrentUser(range: Range<Int>, completionBlock: PFQueryArrayResultBlock) { //This is done so you can call this func with 'ParseHelper.timelimeRequestforUser instead of just timelineRequestforUser //So we will always find the function being called
         let followingQuery = PFQuery(className: ParseFollowClass)
         followingQuery.whereKey(ParseFollowFromUser, equalTo: PFUser.currentUser()!)
         
@@ -50,7 +50,9 @@ class ParseHelper { //Going to wrap all of our helper methods into a class calle
         query.includeKey(ParsePostUser)
         query.orderByDescending(ParsePostCreatedAt)
         
-        
+        query.skip = range.startIndex//PFQuery provides a skip property which allows us to define how many elements that match our query shall be skipped //Equivlent to startIndex of our randge
+
+        query.limit = range.endIndex - range.startIndex //liit property defines how many elements we want to load. We Calculate the size of the range (by subtracting the startIndex from the endIndex and pas s the result to the limit property 
         //All of the code before this is exacctly the same as the query that was in TimeLine but this line below. This doesn't provide a closure and handling the results of the query but hands off the results of the closure that is then handed to the complationBlcok parameter. // This menas that anyone is able to handle the results returnted from query
         query.findObjectsInBackgroundWithBlock(completionBlock)
     }
@@ -87,7 +89,7 @@ class ParseHelper { //Going to wrap all of our helper methods into a class calle
     }
 }
 
-extension PFObject { //This will allow swift to know to consider any two Parse objects equal if they ahve the same object ID 
+extension PFObject { //This will allow swift to know to consider any two Parse objects equal if they ahve the same object ID
     
     public override func isEqual(object: AnyObject?) -> Bool {
         if (object as? PFObject)?.objectId == self.objectId {
