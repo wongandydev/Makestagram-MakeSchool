@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class ParseHelper { //Going to wrap all of our helper methods into a class called PatseHelper. this is done so all of the functions are bundled under the ParseHelper namespace. THis makes codes easier t oread.
+class ParseHelper { //Going to wrap all of our helper methods into a class called PatseHelper. this is done so all of the functions are bundled under the ParseHelper namespace. THis makes codes easier to read.
     
     //Following Relation 
     static let ParseFollowClass = "Follow"
