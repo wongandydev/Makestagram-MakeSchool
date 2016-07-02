@@ -38,6 +38,7 @@
 		A11E75241D24123D00FA64EE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E75231D24123D00FA64EE /* Post.swift */; };
 		A11E75271D24A6ED00FA64EE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E75261D24A6ED00FA64EE /* PostTableViewCell.swift */; };
 		A11E75291D2565E800FA64EE /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E75281D2565E800FA64EE /* ParseHelper.swift */; };
+		A1FB6CD51D26FFE5003D804B /* FriendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB6CD41D26FFE5003D804B /* FriendSearchTableViewCell.swift */; };
 		B44235E1D70058F3308DB6C4 /* Pods_MakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105767094BEEA2FDFBCF83CE /* Pods_MakestagramTests.framework */; };
 		C471EADF6084C00422FD85B8 /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A1E9FA37C0DD5531D66EF2 /* Pods_Makestagram.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		A11E75231D24123D00FA64EE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A11E75261D24A6ED00FA64EE /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A11E75281D2565E800FA64EE /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		A1FB6CD41D26FFE5003D804B /* FriendSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchTableViewCell.swift; sourceTree = "<group>"; };
 		B1E4CBDDA52AD4DEF759CE38 /* Pods-MakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakestagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakestagramTests/Pods-MakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A1E9FA37C0DD5531D66EF2 /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71BA615EBD541686EEEDECB /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		627718811B0A581600AF5C6E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A1FB6CD31D26FFCC003D804B /* FriendSearch */,
 				A11E75251D24A6D500FA64EE /* Timeline */,
 				627718821B0A581600AF5C6E /* FilterViewController */,
 				A11E75151D22C55E00FA64EE /* TimelineViewController.swift */,
@@ -296,6 +299,14 @@
 				A11E75261D24A6ED00FA64EE /* PostTableViewCell.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		A1FB6CD31D26FFCC003D804B /* FriendSearch */ = {
+			isa = PBXGroup;
+			children = (
+				A1FB6CD41D26FFE5003D804B /* FriendSearchTableViewCell.swift */,
+			);
+			path = FriendSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +527,7 @@
 				A11E75161D22C55E00FA64EE /* TimelineViewController.swift in Sources */,
 				A11E75211D22FAFB00FA64EE /* PhotoTakingHelper.swift in Sources */,
 				A11E75181D22C5DB00FA64EE /* PhotoViewController.swift in Sources */,
+				A1FB6CD51D26FFE5003D804B /* FriendSearchTableViewCell.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
 				627718971B0A581700AF5C6E /* FilterViewController.swift in Sources */,
 				A11E75291D2565E800FA64EE /* ParseHelper.swift in Sources */,
