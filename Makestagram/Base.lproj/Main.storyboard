@@ -133,6 +133,10 @@
                     <tabBarItem key="tabBarItem" title="people" image="people" id="CTr-NJ-Ewg">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="searchBar" destination="x7M-NG-8e2" id="WyN-K6-bSh"/>
+                        <outlet property="tableView" destination="udh-cR-W3X" id="W8i-EU-afc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzi-aD-oJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,7 +280,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="KCJ-wI-NOf">
             <objects>
-                <tabBarController id="kGp-Gz-lLj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="kGp-Gz-lLj" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="O0g-pP-dky">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
