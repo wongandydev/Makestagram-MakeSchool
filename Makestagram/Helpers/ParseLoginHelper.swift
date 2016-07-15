@@ -29,7 +29,7 @@ class ParseLoginHelper : NSObject {
     }
 }
 
-extension ParseLoginHelper : PFLogInViewControllerDelegate {
+extension ParseLoginHelper : PFLogInViewControllerDelegate { //Extends class ParseLoginHelper to Parse Login ViewController Delefate 
   
   
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
